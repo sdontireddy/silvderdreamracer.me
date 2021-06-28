@@ -3,7 +3,8 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
-
+__pycache__/
+output/
 # Other files and folders
 .settings/
 
