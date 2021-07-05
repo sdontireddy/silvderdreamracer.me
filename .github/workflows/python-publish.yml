@@ -70,4 +70,4 @@ jobs:
     - name: Copy files to S3 bucket
       run: |
         ls
-        aws s3 sync ./output/ s3:${{ secrets.BUCKET_NAME }}
+        aws s3 sync output/ s3://www.silverdreamracer.me
