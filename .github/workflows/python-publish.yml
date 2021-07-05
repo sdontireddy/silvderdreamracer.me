@@ -62,4 +62,5 @@ jobs:
         role-session-name: AssetsUploadSession
     - name: Copy files to S3 bucket
       run: |
+        ls
         aws s3 sync ./output/ s3:${{ secrets.BUCKET_NAME }}
