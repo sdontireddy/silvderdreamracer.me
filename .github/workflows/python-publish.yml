@@ -45,7 +45,8 @@ jobs:
     name: Upload assets to S3 bucket
     needs: [deploy]
     runs-on: ubuntu-latest
-
+    environment:
+      name: mine
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
