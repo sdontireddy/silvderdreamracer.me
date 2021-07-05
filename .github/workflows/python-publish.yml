@@ -23,7 +23,16 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pelican
         pelican --help
+        pelican-themes ls
         python -m pip install "pelican[markdown]"
+        echo $PWD
+        cd $PYTHON_HOME
+        mkdir pelican-addon-clones
+        cd pelican-addon-clones
+        git clone https://github.com/alexandrevicenzi/Flex
+        pelican-themes --install Flex/ --verbose
+        pican-themes --list
+                
     - name: Generate OutPutfolder
       run: |
         make publish
