@@ -1,4 +1,4 @@
-
+## Install and trigger Pelican publish
 name: Trigger Make
 
 on:
