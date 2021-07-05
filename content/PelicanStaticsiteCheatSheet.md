@@ -7,19 +7,20 @@ Slug: pelical-static-site-deploy-amazon-s3
 Status: published
 
 ### Create Virtual Environment for Pelican
-``` python3 -m venv ~/virtualenvs/pelican
+```
+python3 -m venv ~/virtualenvs/pelican
 cd ~/virtualenvs/pelican/
-
 source bin/activate
 ```
+
 #### install Pelican
 
-```python3 -m pip install pelican```
+``` python3 -m pip install pelican ```
 ### Validate Pelican installation
-```pelican --help```
+``` pelican --help ```
 
 ### Install Pelican Markdown related plugins
-```python -m pip install "pelican[markdown]"```
+``` python -m pip install "pelican[markdown]" ```
 
 #### Pelican Validation
 
@@ -32,11 +33,12 @@ source bin/activate
 ```  cd $PYTHON_HOME 
   mkdir pelican-addon-clones # Optional just creating a separate folder for themese
   cd pelican-addon-clones
-  ```
+ ```
+ 
   ```
   git clone https://github.com/alexandrevicenzi/Flex # pick your own theme
   pelican-themes --install Flex/ --verbose
-        pelican-themes -l
+ pelican-themes -l
 ```
 
 #### Run Dev server
@@ -47,6 +49,6 @@ localhost:8000
 
 ``` make publish ```
 
-#### Sync to S3
+#### Sync Output folder to S3
 
  ``` aws s3 sync output/ s3://BUCKET_NAME```
