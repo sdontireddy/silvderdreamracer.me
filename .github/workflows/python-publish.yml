@@ -23,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pelican
         pelican --help
-        pelican-themes list
+        
         echo $PWD
         python -m pip install "pelican[markdown]"
         pwd
@@ -33,7 +33,7 @@ jobs:
         #cd pelican-addon-clones
         git clone https://github.com/alexandrevicenzi/Flex
         pelican-themes --install Flex/ --verbose
-        pelican-themes --list
+        pelican-themes -l
                 
     - name: Generate OutPutfolder
       run: |
