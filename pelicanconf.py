@@ -9,10 +9,11 @@ SITEURL = 'https://www.silverdreamracer.me'
 SITESUBTITLE = '  You will Know it when i know it...'
 PYGMENTS_STYLE = "monokai"
 THEME = 'Flex'
-#STATIC_PATHS = ['img', 'static']
+STATIC_PATHS = ['images']
 DATE_FORMATS = {
     "en": "%B %d, %Y",
 }
+FAVICON = '/images/favicon.ico'
 
 PATH = 'content'
 
@@ -38,7 +39,7 @@ THEME_COLOR_ENABLE_USER_OVERRIDE = True
 
 USE_LESS = True
 
-COPYRIGHT_YEAR = datetime.now().year
+COPYRIGHT_YEAR = "2021  silverdreamracer.me"
 
 
 # Blogroll
@@ -85,6 +86,7 @@ MENUITEMS = (
              ('Quick References', '/category/quick-reference'),
              ('AWS', '/category/aws')         
 )
+
 
 SITEMAP = {
     'format': 'xml',

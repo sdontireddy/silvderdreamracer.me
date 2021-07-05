@@ -1,3 +1,11 @@
+Title: Generate Bulk XML files for Load testing using JMeter
+Date: 2021-07-04 20:53
+Author: sdontireddy
+Category: Performance
+Tags: Jmeter, Performance , Loadtesting
+Slug: jmeter-generate-bulk-xml-files-load-testing
+Status: published
+
 # Generate Bulk XML files for Load testing
 
 UseCase : One of the very common use cases while performing loading testing an backend applications /services that rely on XML's as input is to generate 1000's of XMLs  with minor differences and feed in to the application in order to gather the metrics for the services under stress. 
@@ -40,7 +48,6 @@ adddays : 10
 format: yyyy-MM-dd'T'HH:mm:ss.SSSZ
 ```
 
-Please refer to 
-https://github.com/sdontireddy/performance-tests for more information.
+Please refer to [project](https://github.com/sdontireddy/performance-tests) for more information.
 
  
