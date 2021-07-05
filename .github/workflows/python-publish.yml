@@ -41,6 +41,11 @@ jobs:
         echo $BUCKET_NAME
         echo $AWS_ACCESS_KEY_ID
         make publish
+    - name: Upload outputfolder 
+      uses: actions/upload-artifact@master
+      with:
+        name: outputfolder
+        path: ./output/
   upload:
     name: Upload assets to S3 bucket
     needs: [deploy]
@@ -48,8 +53,10 @@ jobs:
     environment:
       name: mine
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - uses: actions/download-artifact@master
+      with:
+        name: outputfolder
+        path: ./output/
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
