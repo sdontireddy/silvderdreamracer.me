@@ -2,7 +2,7 @@ Title: Install Chrome on Amazon Linux2 WorkSpaces
 Date: 2020-07-03 01:53
 Author: sdontireddy
 Category: aws
-Tags: AWS, Workspace, Crhome , Linux
+Tags: AWS, Workspace, Chrome , Linux
 Slug: install-chrome-on-amazon-linux2
 Status: published
 

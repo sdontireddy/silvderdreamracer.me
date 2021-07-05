@@ -1,7 +1,7 @@
 Title: Splunk Query Reference guide
 Date: 2021-06-21 01:53
 Author: sdontireddy
-Category: quick-reference
+Category: Splunk
 Tags: Splunk, Reference , Cheat Sheet
 Slug: splunk-query-reference-guide
 Status: published

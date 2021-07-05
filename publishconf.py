@@ -6,19 +6,25 @@
 
 import os
 import sys
+
 sys.path.append(os.curdir)
-from pelicanconf import *
+
+try:
+    from pelicanconf import *
+except ImportError:
+    sys.path.append(os.path.join(os.curdir, "docs"))
+    from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = 'https://silvderdreamracer.me'
+SITEURL = 'https://www.silverdreamracer.me/'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
-DELETE_OUTPUT_DIRECTORY = True
+DELETE_OUTPUT_DIRECTORY = False
 
 # Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = "UA-201246397-1"
