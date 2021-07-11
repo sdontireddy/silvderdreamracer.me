@@ -55,14 +55,12 @@ Pls gather below details after executing cloudformation template
 ###### Configure github to use the AWS user
 
 On the the repo where you have your static content hosted , configure the AWS credentials gathered in the previous step as shown below
-
-![gitlab Secret] (/images/github-secrets.png)
+<img src="/images/github-secrets.png" alt="gitlab Secret" title="gitlab Secret">
 
 #### Configure github workflow for Continuous Delivery to S3
 
 Go your repository , Go to Actions Menu , Click on New Workflow
-
-![Workflow] (/images/github-actions-new-workflow.PNG)
+<img src="/images/github-actions-new-workflow.PNG" alt="Workflow" title="Workflow">
 
 
 
