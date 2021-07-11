@@ -1,0 +1,116 @@
+Title: Pelican Static Site Continous Delivery to AWS S3 using github actions for continuous delivery
+Date: 2021-07-11 1:53
+Author: sdontireddy
+Category: Performance
+Tags: WebSite, S3 , Pelican , github actions , Continous Delivery
+Slug: pelican-static-site-github-actions-continous-delivery-to-aws-s3
+Status: published
+
+### Pelican Static Site Continous Delivery to AWS S3 using github actions for continuous delivery
+
+Usecase : If you alredy have a Pelican ** Markdown ** based static generator as a platform for your static site and is hosted in AWS S3
+and you dont want to manage any of the below things except creating the content in the markdown.
+
+- Running Pelican commands to generate static files
+- Pushing the files manually to S3
+
+
+##### Prerequisites
+- This article assumed you already have a pelican based static site hosted and running in amazon S3.If not please refer here(TODO)
+- Make sure you have AWS credentials required to run a CloudFormation template
+- AWS Cloudformation minimum knowledge to run the template just one time.
+
+### One Time Setup
+
+###### Configure an AWS user to be used for github actions
+
+If you want to levarage github actions to do Continous Delivery and deploy the static files without touching any other code
+then we would need create an AWS user with very minimal set of privilages to be specifically used for github actions.
+
+Use the AWS cloud formation template [here](https://github.com/sdontireddy/aws-cloud-formation-gh-user)
+
+Run the below commands to generate required AWS credentials.
+
+
+###### Configure github to use the AWS user
+On the the repo where you have your static content hosted
+
+- Configure AWS credentials
+- Configure the BucketName
+
+#### Create github workflow using below Code
+
+```
+## Install and trigger Pelican publish
+name: Trigger Make
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      env:
+        BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+        AWS_ACCESS_KEY_ID : ${{ secrets.AWS_ACCESS_KEY_ID }}
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install pelican
+        
+        python -m pip install "pelican[markdown]"
+        #
+        git clone https://github.com/alexandrevicenzi/Flex
+        pelican-themes --install Flex/ --verbose
+        pelican-themes -l
+                
+    - name: Generate OutPutfolder
+      run: |
+        echo $BUCKET_NAME
+        make publish
+    - name: Upload outputfolder 
+      uses: actions/upload-artifact@master
+      with:
+        name: outputfolder
+        path: ./output/
+  upload:
+    name: Upload assets to S3 bucket
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    environment:
+      name: mine
+    steps:
+    - uses: actions/download-artifact@master
+      with:
+        name: outputfolder
+        path: ./output/
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region:  ${{ secrets.AWS_REGION }}
+        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
+        role-duration-seconds: 1200
+        role-session-name: AssetsUploadSession
+    - name: Copy files to S3 bucket
+      run: |
+        ls
+        aws s3 sync output/ s3://${{ secrets.BUCKET_NAME }}
+
+```
+
+
+Note : Default **Flex** Pelican template is used.
+
+Thats it! You have a github repository to manage content in markdown , whenever you push new code to main branch your content in **Markdown** will be converted to Static HTML and deplyed to S3 bucket specified in the previous steps.
