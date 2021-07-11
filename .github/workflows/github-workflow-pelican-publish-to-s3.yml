@@ -23,15 +23,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install pelican
-        pelican --help
         
-        echo $PWD
         python -m pip install "pelican[markdown]"
-        pwd
-        
-        #cd $PYTHON_HOME
-        #mkdir pelican-addon-clones
-        #cd pelican-addon-clones
+        #
         git clone https://github.com/alexandrevicenzi/Flex
         pelican-themes --install Flex/ --verbose
         pelican-themes -l
@@ -39,7 +33,6 @@ jobs:
     - name: Generate OutPutfolder
       run: |
         echo $BUCKET_NAME
-        echo $AWS_ACCESS_KEY_ID
         make publish
     - name: Upload outputfolder 
       uses: actions/upload-artifact@master
