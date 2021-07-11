@@ -41,7 +41,8 @@ aws cloudformation create-stack --stack-name gh-actions-user \
   --output yaml \
   --profile my-profile
   
-  ```
+```
+
 Pls gather below details after executing cloudformation template
 
 - AWS_ACCESS_KEY_ID
@@ -55,19 +56,21 @@ Pls gather below details after executing cloudformation template
 
 On the the repo where you have your static content hosted , configure the AWS credentials gathered in the previous step as shown below
 
-![gitlab Secret] (../images/github-secrets.png)
+![gitlab Secret] (/images/github-secrets.png)
 
 #### Configure github workflow for Continuous Delivery to S3
 
 Go your repository , Go to Actions Menu , Click on New Workflow
 
-![Workflow] (../images/github-actions-new-workflow.PNG)
+![Workflow] (/images/github-actions-new-workflow.PNG)
 
 
 
 
 Copy paste below code ,pls refer [here](https://raw.githubusercontent.com/sdontireddy/pelican-static-site-continuous-delivery-to-aws-s3/main/.github/workflows/publish-pelican-site-to-aws-s3.yml) for the contents.
+
 ```
+
 ## Install and trigger Pelican publish
 name: Trigger Make
 
@@ -133,7 +136,9 @@ jobs:
         ls
         aws s3 sync output/ s3://${{ secrets.BUCKET_NAME }}
 
+
 ```
+
 
 
 Note : Default **Flex** Pelican template is used.If you need to chage , pls do change Line 99 in above file.
