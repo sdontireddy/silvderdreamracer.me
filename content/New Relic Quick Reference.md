@@ -1,5 +1,5 @@
 Title:  NRQL- New Relics query language Quick Reference Guide
-Date: 2022-05-02 21:53
+Date: 2021-08-02 21:53
 Author: sdontireddy
 Category: Observability
 Tags: NewRelic , NRQL
