@@ -6,7 +6,7 @@ Tags: GIT, Pipeline , CI/CD , Docker , Docker network
 Slug: docker-compse-network-connection-issues
 Status: published
 
-# How i traiged issues with docker/docker compose while settingup CI/CD 
+# How i traiged issues with docker/docker compose while setting up CI/CD 
 
 Usecase : Setup a Docker compose file to bringup entire infrastructure required to to test a microservice(infact combination of couple of microservices as we wanted to run domain based integration tests)
 as part of the CICD pipelines
@@ -18,7 +18,7 @@ Note : If you have noticed i was trying to bringup the entire infrastrucuture in
 
 Below are some of the challenges / issues faced during the setup
 
-Issue #1 : One service not able to communicate with another service
+#### Issue #1 : One service not able to communicate with another service
 
 Inorder for one service to communicate with other we have to specify below property on the container which should allow communications from other containers
 
@@ -39,7 +39,7 @@ Compose implementations MUST create matching entry with the IP address and hostn
 50.31.209.229   otherhost
 ```
 
-Issue #2 : Infrastructure is up and working fine on Docker with Windows Sybsystem for Linux , however challenges on Mac
+#### Issue #2 : Infrastructure is up and working fine on Docker with Windows Sybsystem for Linux , however challenges on Mac
 
 ```
 The host networking driver only works on Linux hosts, and is not supported on Docker Desktop for Mac, Docker Desktop for Windows, or Docker EE for Windows Server.
@@ -52,16 +52,16 @@ Note: Given that the container does not have its own IP-address when using host 
 ```
 
 
-Issue #3 : Communication : InvalidArgument: “host” network_mode is incompatible with port_bindings
+#### Issue #3 : Communication : InvalidArgument: “host” network_mode is incompatible with port_bindings
 
 We can not expose ports and at the same time cannot use networK_mode as "host" both are mutul exlusive
 
 
-Issue $4 : Applications suppose to comminicate using GRPC are not able to connect to each other
+#### Issue $4 : Applications suppose to comminicate using GRPC are not able to connect to each other
 
 Debug steps : Quickly installed **lsof** package and ran **lsof -i**
 
-lsof -i : List all the ports .process opened listening 
+**lsof -i** : List all the ports .process opened listening 
 
 This enabled me to see the ports opened for communication
 
