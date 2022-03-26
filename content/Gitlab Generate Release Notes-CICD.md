@@ -1,5 +1,5 @@
 Title: Gitlab Scripts for automatic release notes(CHANGELOG.md) generation
-Date: 2022-02-05 02:53
+Date: 2022-02-12 02:53
 Author: sdontireddy
 Category: CI/CD
 Tags: GIT, Pipeline , CI/CD , Release Notes , Changelog.md

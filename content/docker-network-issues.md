@@ -1,4 +1,4 @@
-Title: Docker , Docker compose netwokring isssues settingup CI/CD 
+Title: Docker , Docker compose network isssues 
 Date: 2022-03-25 22:53
 Author: sdontireddy
 Category: CI/CD , Docker
