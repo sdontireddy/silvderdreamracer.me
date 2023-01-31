@@ -41,6 +41,8 @@ jobs:
         path: ./output/
   upload:
     name: Upload assets to S3 bucket
+    permissions:
+      id-token: write # This is required for requesting the JWT
     needs: [deploy]
     runs-on: ubuntu-latest
     environment:
