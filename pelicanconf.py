@@ -99,6 +99,7 @@ GOOGLE_ADSENSE = {
         'article_bottom': '1234566', # Banner after article content (article only)
     }
 }
+ADD_THIS_ID = 'ra-63dbd4845c561c7d'
 
 SITEMAP = {
     'format': 'xml',
