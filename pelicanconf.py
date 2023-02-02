@@ -9,7 +9,9 @@ SITEURL = 'https://www.silverdreamracer.me'
 SITESUBTITLE = '  You will Know it when i know it...'
 PYGMENTS_STYLE = "monokai"
 THEME = 'Flex'
-STATIC_PATHS = ['images']
+
+STATIC_PATHS = ["images", "extra/ads.txt"]
+
 DATE_FORMATS = {
     "en": "%B %d, %Y",
 }
@@ -100,6 +102,10 @@ GOOGLE_ADSENSE = {
     }
 }
 ADD_THIS_ID = 'ra-63dbd4845c561c7d'
+
+EXTRA_PATH_METADATA = {
+    "extra/ads.txt": {"path": "ads.txt"}
+}
 
 SITEMAP = {
     'format': 'xml',
