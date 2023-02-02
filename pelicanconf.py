@@ -9,7 +9,9 @@ SITEURL = 'https://www.silverdreamracer.me'
 SITESUBTITLE = '  You will Know it when i know it...'
 PYGMENTS_STYLE = "monokai"
 THEME = 'Flex'
-STATIC_PATHS = ['images']
+
+STATIC_PATHS = ["images", "extra/ads.txt"]
+
 DATE_FORMATS = {
     "en": "%B %d, %Y",
 }
