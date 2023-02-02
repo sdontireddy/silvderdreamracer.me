@@ -101,6 +101,10 @@ GOOGLE_ADSENSE = {
 }
 ADD_THIS_ID = 'ra-63dbd4845c561c7d'
 
+EXTRA_PATH_METADATA = {
+    "extra/ads.txt": {"path": "ads.txt"}
+}
+
 SITEMAP = {
     'format': 'xml',
     'priorities': {
