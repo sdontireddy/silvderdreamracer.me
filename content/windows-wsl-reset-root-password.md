@@ -11,8 +11,9 @@ Status: published
 
 1. Open cmd.exe
 2. wsl -u root
-3. Enter New password
-4. Renter New password
-5. exit
-6. wsl
-7. Test using sudo echo "test" , you should see "test" message
+3. passwd root
+4. Enter New password
+5. Renter New password
+6. exit
+7. wsl
+8. Test using sudo echo "test" , you should see "test" message
