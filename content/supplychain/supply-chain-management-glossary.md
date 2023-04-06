@@ -1,4 +1,3 @@
-
 Title: Supply Chain Management Glossary 
 Date: 2023-02-16 09:41
 Author: sdontireddy
