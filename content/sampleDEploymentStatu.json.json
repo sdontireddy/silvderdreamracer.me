@@ -1,0 +1,101 @@
+{
+  "success": true,
+  "header": null,
+  "data": [
+    {
+      "Messages": null,
+      "BusinessUnits": [],
+      "Organizations": [
+        {
+          "OrganizationId": "Mine1",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV1",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV2",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV3",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV4",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV5",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV6",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "Mine-STG",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV6",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "Mine-TRAN",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV7",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV8",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "Mine-AUTO",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV9",
+          "Accessible": true,
+          "Enabled": false
+        },
+        {
+          "OrganizationId": "ENV10",
+          "Accessible": true,
+          "Enabled": false
+        }
+      ],
+      "GlobalEnabled": "ON",
+      "ExtensionPackId": "MIne",
+      "EnabledForOrg": "ALL",
+      "EnabledForBU": "ALL"
+    }
+  ],
+  "messageKey": null,
+  "message": null,
+  "errors": [],
+  "exceptions": [],
+  "messages": {
+    "Message": [],
+    "Size": 0
+  },
+  "rootCause": null,
+  "statusCode": "OK"
+}
