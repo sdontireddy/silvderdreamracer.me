@@ -1,3 +1,11 @@
+Title: In the Age of AI, Judgment Beats Syntax
+date: 2025-11-23 15:14
+Author: sdontireddy
+Category: WebSite
+Tags: AI,Development , System Design
+Slug: in-the-age-of-ai-judgment-beats-syntax
+Status: published
+
 ##  In the Age of AI, Judgment Beats Syntax
 
 **Junior developer roles are shrinking.**
