@@ -6,6 +6,10 @@ Tags: SCM, ERP, WMS, OMS, AI, Decision Intelligence, Warehouse Operations, Suppl
 Slug: transaction-processing-to-decision-intelligence
 Status: published
 
+Recently, I had a thought-provoking interview discussion with a company in the warehouse automation and fulfillment orchestration space.
+
+The conversation made me reflect on where enterprise systems are heading.
+
 ### Why This Shift Matters
 
 For years, enterprise platforms like ERP, WMS, OMS, and warehouse automation systems were designed primarily for transaction execution: move orders, update inventory, complete tasks, trigger shipments, and post financials.
