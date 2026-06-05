@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+from collections import Counter
 from datetime import datetime
+from pathlib import Path
+import re
 
 AUTHOR = 'Sarath Dontireddy'
-SITENAME = 'silvderdreamracer.me'
+SITENAME = 'silverdreamracer.me'
 SITETITLE = SITENAME
 SITEURL = 'https://www.silverdreamracer.me'
 SITESUBTITLE = '  You will Know it when i know it...'
@@ -18,6 +21,16 @@ DATE_FORMATS = {
 FAVICON = '/images/favicon.ico'
 
 PATH = 'content'
+CONTENT_ROOT = Path(__file__).parent / PATH
+MENU_FOLDER_EXCLUDES = {"extra", "images"}
+ARTICLE_PATHS = [
+    '.',
+    'AI',
+    'docker',
+    'git',
+    'supplychain',
+]
+PAGE_PATHS = ['pages']
 
 TIMEZONE = "America/New_York"
 
@@ -25,6 +38,50 @@ DEFAULT_LANG = 'en'
 USE_FOLDER_AS_CATEGORY = False
 MAIN_MENU = True
 HOME_HIDE_TAGS = False
+
+
+def _menu_title(folder_name):
+    overrides = {
+        'AI': 'AI',
+        'git': 'Git',
+        'docker': 'Docker',
+        'supplychain': 'Supply Chain',
+    }
+    return overrides.get(folder_name, folder_name.replace('-', ' ').replace('_', ' ').title())
+
+
+def _menu_slug(folder_name):
+    return re.sub(r'[^a-z0-9]+', '-', folder_name.lower()).strip('-')
+
+
+def _folder_category(folder_name):
+    category_values = []
+    folder_path = CONTENT_ROOT / folder_name
+
+    for article_path in sorted(folder_path.rglob('*.md')):
+        with article_path.open(encoding='utf-8') as article_file:
+            for _, line in zip(range(25), article_file):
+                if line.lower().startswith('category:'):
+                    category_values.append(line.split(':', 1)[1].strip())
+                    break
+
+    for category_name in category_values:
+        if _menu_slug(category_name) == _menu_slug(folder_name):
+            return category_name
+
+    if category_values:
+        return Counter(category_values).most_common(1)[0][0]
+
+    return folder_name
+
+
+CONTENT_MENU_FOLDERS = tuple(
+    sorted(
+        folder.name
+        for folder in CONTENT_ROOT.iterdir()
+        if folder.is_dir() and not folder.name.startswith('.') and folder.name not in MENU_FOLDER_EXCLUDES
+    )
+)
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -41,14 +98,7 @@ THEME_COLOR_ENABLE_USER_OVERRIDE = True
 
 USE_LESS = True
 
-COPYRIGHT_YEAR = "2021  silverdreamracer.me"
-
-
-# Blogroll
-#LINKS = (('Pelican', 'https://getpelican.com/'),
- #        ('Python.org', 'https://www.python.org/'),
-  #       ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-   #      ('You can modify those links in your config file', '#'),)
+COPYRIGHT_YEAR = "2026  silverdreamracer.me"
 
 
 # Social widget
@@ -84,9 +134,12 @@ AUTHORS_BIO = {
 
 
 MENUITEMS = (
-             ('Fork me on GitHub!', 'https://github.com/sdontireddy/silvderdreamracer.me'),
-             ('Quick References', '/category/quick-reference'),
-             ('AWS', '/category/aws')         
+    ('Find me on GitHub!', 'https://github.com/sdontireddy/silverdreamracer.me'),
+    ('AboutMe', '/aboutme.html'),
+    *tuple(
+        (_menu_title(folder_name), f"/category/{_menu_slug(_folder_category(folder_name))}")
+        for folder_name in CONTENT_MENU_FOLDERS
+    ),
 )
 
 GOOGLE_ADSENSE = {
