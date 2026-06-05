@@ -7,9 +7,9 @@ import re
 
 AUTHOR = 'Sarath Dontireddy'
 SITENAME = 'silverdreamracer.me'
-SITETITLE = SITENAME
+SITETITLE = 'Sarath Dontireddy'
 SITEURL = 'https://www.silverdreamracer.me'
-SITESUBTITLE = '  You will Know it when i know it...'
+SITESUBTITLE = 'You will know it when I know it...'
 PYGMENTS_STYLE = "monokai"
 THEME = 'Flex'
 
