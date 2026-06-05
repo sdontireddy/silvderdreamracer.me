@@ -13,7 +13,8 @@ SITESUBTITLE = 'You will know it when I know it...'
 PYGMENTS_STYLE = "monokai"
 THEME = 'Flex'
 
-STATIC_PATHS = ["images", "extra/ads.txt"]
+STATIC_PATHS = ["images", "extra/ads.txt", "extra/custom.css"]
+CUSTOM_CSS = "custom.css"
 
 DATE_FORMATS = {
     "en": "%B %d, %Y",
@@ -165,7 +166,8 @@ GOOGLE_ADSENSE = {
 ADD_THIS_ID = 'ra-63dbd4845c561c7d'
 
 EXTRA_PATH_METADATA = {
-    "extra/ads.txt": {"path": "ads.txt"}
+    "extra/ads.txt": {"path": "ads.txt"},
+    "extra/custom.css": {"path": "custom.css"},
 }
 
 SITEMAP = {
