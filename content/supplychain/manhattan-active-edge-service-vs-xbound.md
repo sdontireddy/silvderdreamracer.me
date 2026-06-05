@@ -1,4 +1,4 @@
-Title: Edge Service vs XBound in MAWM: What Is the Difference and Why It Matters
+Title: Manhattan Active Edge Service vs XBound in MAWM: What Is the Difference and Why It Matters
 Date: 2026-04-11 22:47
 Author: sdontireddy
 Category: SCM

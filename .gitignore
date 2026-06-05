@@ -7,7 +7,7 @@ __pycache__/
 output/
 # Other files and folders
 .settings/
-Flex/
+Flex
 
 # Executables
 *.swf

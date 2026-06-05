@@ -22,7 +22,7 @@ FAVICON = '/images/favicon.ico'
 
 PATH = 'content'
 CONTENT_ROOT = Path(__file__).parent / PATH
-MENU_FOLDER_EXCLUDES = {"extra", "images"}
+MENU_FOLDER_EXCLUDES = {"extra", "images", "pages"}
 ARTICLE_PATHS = [
     '.',
     'AI',
@@ -37,6 +37,7 @@ TIMEZONE = "America/New_York"
 DEFAULT_LANG = 'en'
 USE_FOLDER_AS_CATEGORY = False
 MAIN_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 HOME_HIDE_TAGS = False
 
 
@@ -107,6 +108,14 @@ SOCIAL = (('twitter', 'https://twitter.com/sarathreddy'),
           ('wordpress', 'https://spaceageracer.wordpress.com/'),
           ('github', 'https://github.com/sdontireddy'))
 
+LINKS_IN_NEW_TAB = "external"
+LINKS = (
+    ('🧠 Decision Intelligence', 'https://www.silverdreamracer.me/transaction-processing-to-decision-intelligence.html#transaction-processing-to-decision-intelligence'),
+    ('🏭 Edge Servers in WMS', 'https://www.silverdreamracer.me/why-edge-servers-are-important-in-modern-wms.html#why-edge-servers-are-important-in-modern-wms'),
+    ('🤖 Automation and Tasks', 'https://www.silverdreamracer.me/my-take-on-the-mckinsey-report-automation-is-coming-for-tasks-not-entire-professions.html#my-take-on-the-mckinsey-report-automation-is-coming-for-tasks-not-entire-professions'),
+    ('🗂️ Local RAG Knowledge Base', 'https://github.com/sdontireddy/rag-knowledge-base'),
+)
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -134,7 +143,6 @@ AUTHORS_BIO = {
 
 
 MENUITEMS = (
-    ('Find me on GitHub!', 'https://github.com/sdontireddy/silverdreamracer.me'),
     ('AboutMe', '/aboutme.html'),
     *tuple(
         (_menu_title(folder_name), f"/category/{_menu_slug(_folder_category(folder_name))}")
