@@ -1,8 +1,8 @@
 Title: How I Reduced OpenClaw Token Usage by Tightening Instructions
-**Date:** 2026-06-28
+Date: 2026-06-28 10:00
 Author: sdontireddy
 Category: AI
-Tags: AI, OpenClaw
+Tags: AI, OpenClaw , Optimize
 Slug: openclaw-reduce-token-usage
 Status: published
 
