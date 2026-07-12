@@ -150,13 +150,14 @@ def slugify_name(name):
     return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
 
 
+# ---- Static menu order — explicit, intentional ----
 MENUITEMS = (
-    ('AboutMe', '/aboutme.html'),
-    *tuple(
-        (_menu_title(folder_name), f"/category/{_menu_slug(_folder_category(folder_name))}")
-        for folder_name in CONTENT_MENU_FOLDERS
-        if _menu_slug(_folder_category(folder_name)) not in {slugify_name(n) for n in MENU_CATEGORY_EXCLUDES}
-    ),
+    ('Home', '/'),
+    ('About Me', '/aboutme.html'),
+    ('Supply Chain', '/category/scm'),
+    ('AI', '/category/ai.html'),
+    ('Infra', '/infra.html'),
+    ('Projects', '/projects.html'),
 )
 
 GOOGLE_ADSENSE = {
