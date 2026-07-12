@@ -140,28 +140,20 @@ This applies to:
 
 ## What I've Built
 
-Open source and reference implementations:
+A small set of focused projects — full details on the [Projects page](/projects.html), but highlights:
 
-### Local RAG Knowledge Base
-**[rag-knowledge-base](https://github.com/sdontireddy/rag-knowledge-base)** — A Docker-based local RAG stack for indexing markdown notes and searching them semantically. Built with Ollama, ChromaDB, FastAPI, and Streamlit. Demonstrates the full flow: ingestion, embeddings, vector search, retrieval, grounded answer generation, and citations.
-
-**Tech:** Docker, Ollama, ChromaDB, FastAPI, Streamlit, Python
-
-### Personal Blog & Static Site
-**[silverdreamracer.me](https://github.com/sdontireddy/silverdreamracer.me)** — Personal blog built with Pelican where Markdown files are the source of truth. Deployed through GitHub Actions to AWS S3 with Route 53 DNS management. Demonstrates static-first, automation-driven, operationally lightweight architecture.
-
-**Tech:** Pelican, GitHub Actions, AWS S3, Route 53, Static site hosting
-
-### Supply Chain Tech Signals
-**[supplychaintechsignals.com](https://supplychaintechsignals.com/)** — Automated daily newsletter curating technology insights from RSS feeds, podcasts, and vendor content. Deployed to Cloudflare Pages with automated ingestion and editorial scoring pipelines.
-
-**Tech:** Cloudflare Pages, RSS/Atom parsing, automated content curation, static site generation
+- **[MAWM Environment Automation](https://github.com/sdontireddy/mawm-automate-environment-management)** — orchestrator for provisioning Manhattan Active WMS environments via sequential API execution with rollback on failure
+- **[Raven](https://github.com/sdontireddy/raven)** — JMeter + Java loader for generating 100K+ middleware payloads from YAML-driven templates
+- **[Supply Chain Tech Signals](https://supplychaintechsignals.com/)** — automated daily newsletter curating high-signal content from the supply chain / warehouse automation space
+- **[Local RAG Knowledge Base](https://github.com/sdontireddy/rag-knowledge-base)** — Docker + Ollama + ChromaDB stack for private semantic search over markdown notes
+- **[silverdreamracer.me](https://github.com/sdontireddy/silverdreamracer.me)** — this site; Pelican + GitHub Actions + S3, content-as-code publishing
 
 ---
 
 ## What I'm Working On Now
 
 I'm exploring how AI agents can improve enterprise workflows — not just chatbots, but agents that can:
+
 - Triage support tickets and route them to the right team
 - Summarize meeting notes and extract action items
 - Search project documentation and surface relevant context
