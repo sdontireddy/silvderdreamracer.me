@@ -152,10 +152,9 @@ def slugify_name(name):
 
 # ---- Static menu order — explicit, intentional ----
 MENUITEMS = (
-    ('Home', '/'),
     ('About Me', '/aboutme.html'),
     ('Supply Chain', '/category/scm'),
-    ('AI', '/category/ai.html'),
+    ('AI', '/category/ai/'),
     ('Infra', '/infra.html'),
     ('Projects', '/projects.html'),
 )

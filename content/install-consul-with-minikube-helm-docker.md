@@ -6,8 +6,6 @@ Tags: infrastructure , network , Consul , MiniKube , Helm Charts
 Slug: install-consul-with-minikube-helm-docker-kubernetes
 Status: published
 
-# Quik instrcution guide to install Consul with MiniKube , Helm Charts and docker on Linux
-
 
 #### Pre-requisites
 

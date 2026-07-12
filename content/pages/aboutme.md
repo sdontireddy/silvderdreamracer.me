@@ -4,7 +4,8 @@ Slug: aboutme
 Status: published
 Save_as: aboutme.html
 
-# Hi, I'm Sarath Dontireddy
+Hi, I'm Sarath Dontireddy
+===============
 
 I'm a Solution Architect with deep experience in building enterprise systems that actually work in production. I focus on integration architecture, warehouse automation, AS/RS systems, and using AI to solve real operational problems.
 

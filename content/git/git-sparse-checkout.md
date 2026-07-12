@@ -6,8 +6,6 @@ Tags: GIT
 Slug: git-checkout-only-specific-folder
 Status: published
 
-# Git - How to checkout only specific subfolder from the github
-
 Often we just need to clone/download a subfolder/submodule from a bit repo
 Example : https://github.com/eugenp/tutorials - This is very big repo with lot of subdirectories
 

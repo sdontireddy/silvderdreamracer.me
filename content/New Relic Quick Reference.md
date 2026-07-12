@@ -6,8 +6,6 @@ Tags: NewRelic , NRQL
 Slug: NewRelic-Query-language-quick-reference-guide-NRQL
 Status: published
 
-# NewRelic NRQL Quick Reference Guide
-
 
 **Select results in the given time of the hours**
 SELECT hourof(timestamp)   FROM Transaction WHERE your_where_cluase and hourof(timestamp) in ('01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00') SINCE this week 

@@ -5,8 +5,6 @@ Category:  Docker
 Tags: Shell, CLI  , Docker , Docker Compose
 Slug: docker-exec-write-result-to-a-variable
 Status: published
-
-# How to exectute a command inside a docker and write the output to a variable
  This command bringsup a docker and exectes the command inside the docker and stores the output into client
 
 ```

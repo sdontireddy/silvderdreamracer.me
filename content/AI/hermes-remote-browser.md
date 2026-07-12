@@ -6,8 +6,6 @@ Tags: AI, Hermes, Browser Automation, SSH, VPS, Remote Debugging
 Slug: hermes-remote-browser
 Status: published
 
-# How to Connect Hermes to a Local Browser from a VPS with an SSH Reverse Tunnel
-
 When Hermes runs on a VPS, it cannot directly reach a browser session running on your local machine.
 
 If you want Hermes to control your local Edge or Chrome browser, the most reliable approach is:

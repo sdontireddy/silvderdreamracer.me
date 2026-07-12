@@ -1,7 +1,7 @@
 Title: In the Age of AI, Judgment Beats Syntax
 date: 2025-11-23 15:14
 Author: sdontireddy
-Category: WebSite
+Category: AI
 Tags: AI,Development , System Design
 Slug: in-the-age-of-ai-judgment-beats-syntax
 Status: published

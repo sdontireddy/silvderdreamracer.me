@@ -6,8 +6,6 @@ Tags: AI, Hermes, OpenClaw, Multi-Agent, VPS, Telegram, Architecture
 Slug: hermes-openclaw-vps-multi-agent-architecture
 Status: published
 
-# Hermes and OpenClaw on a VPS: A Practical Multi-Agent Architecture
-
 Running more than one AI agent on a VPS does not have to mean building a large orchestration platform. A simpler pattern is to run separate agent runtimes, give each one a clear responsibility, and route requests to the right worker.
 
 This post documents the current Hermes and OpenClaw arrangement on my VPS as a practical example. It focuses on the architecture, the role of each agent, Telegram routing, service boundaries, and the design decisions that keep the setup manageable.
