@@ -9,7 +9,8 @@ AUTHOR = 'Sarath Dontireddy'
 SITENAME = 'silverdreamracer.me'
 SITETITLE = 'Sarath Dontireddy'
 SITEURL = 'https://www.silverdreamracer.me'
-SITESUBTITLE = 'You will know it when I know it...'
+SITEDESCRIPTION = 'Practical notes on integration architecture, AS/RS automation, cloud, and AI — by Sarath Dontireddy, Solution Architect.'
+SITESUBTITLE = 'Solution Architect — Integration, AS/RS, Cloud, AI'
 PYGMENTS_STYLE = "monokai"
 THEME = 'Flex'
 
@@ -24,6 +25,7 @@ FAVICON = '/images/favicon.ico'
 PATH = 'content'
 CONTENT_ROOT = Path(__file__).parent / PATH
 MENU_FOLDER_EXCLUDES = {"extra", "images", "pages"}
+MENU_CATEGORY_EXCLUDES = {"misc", "WebSite", "website"}
 ARTICLE_PATHS = [
     '.',
     'AI',
@@ -111,6 +113,7 @@ SOCIAL = (('twitter', 'https://twitter.com/sarathreddy'),
 
 LINKS_IN_NEW_TAB = "external"
 LINKS = (
+    ('📡 Supply Chain Tech Signals', 'https://supplychaintechsignals.com/'),
     ('🧠 Decision Intelligence', 'https://www.silverdreamracer.me/transaction-processing-to-decision-intelligence.html#transaction-processing-to-decision-intelligence'),
     ('🏭 Edge Servers in WMS', 'https://www.silverdreamracer.me/why-edge-servers-are-important-in-modern-wms.html#why-edge-servers-are-important-in-modern-wms'),
     ('🤖 Automation and Tasks', 'https://www.silverdreamracer.me/my-take-on-the-mckinsey-report-automation-is-coming-for-tasks-not-entire-professions.html#my-take-on-the-mckinsey-report-automation-is-coming-for-tasks-not-entire-professions'),
@@ -132,10 +135,10 @@ TAGS_SAVE_AS = 'tags.html'
 AUTHORS_BIO = {
   "sdontireddy": {
     "name": "Sarath Dontireddy",
-    "cover": "https://media-exp1.licdn.com/dms/image/C4E03AQFjXy7HnxWZpA/profile-displayphoto-shrink_400_400/0/1523200602668?e=1630540800&v=beta&t=nl5vXtm7NgH90f-V9r0h79nZP3AZ-NXkEzxdBkmNrq4",
-    "image": "https://media-exp1.licdn.com/dms/image/C4E03AQFjXy7HnxWZpA/profile-displayphoto-shrink_400_400/0/1523200602668?e=1630540800&v=beta&t=nl5vXtm7NgH90f-V9r0h79nZP3AZ-NXkEzxdBkmNrq4",
+    "cover": "/images/favicon.ico",
+    "image": "/theme/img/profile.png",
     "location": "Jacksonville, FL",
-    "bio": "Computer Sceience Engr <p><img src=\'https://images.credly.com/size/680x680/images/2b31a8f4-92c4-468d-87eb-33115d97f6f5/AWS-DataAnalytics-Specialty-2020.png\' alt=\'Cert\'>AWS Certified Data Analytics  Specialty</p><p></p>",
+    "bio": "Solution Architect focused on integration, AS/RS automation, cloud, and AI. <p><img src=\'https://images.credly.com/size/680x680/images/2b31a8f4-92c4-468d-87eb-33115d97f6f5/AWS-DataAnalytics-Specialty-2020.png\' alt=\'Cert\'>AWS Certified Data Analytics — Specialty</p>",
     "linkedin": "sarath-dontireddy/",
     "github": "sdontireddy",
     "twitter": "sarathreddy",
@@ -143,11 +146,16 @@ AUTHORS_BIO = {
 }
 
 
+def slugify_name(name):
+    return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
+
+
 MENUITEMS = (
     ('AboutMe', '/aboutme.html'),
     *tuple(
         (_menu_title(folder_name), f"/category/{_menu_slug(_folder_category(folder_name))}")
         for folder_name in CONTENT_MENU_FOLDERS
+        if _menu_slug(_folder_category(folder_name)) not in {slugify_name(n) for n in MENU_CATEGORY_EXCLUDES}
     ),
 )
 

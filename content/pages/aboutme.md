@@ -1,8 +1,8 @@
 Title: About Me
-Date: 2024-01-15 10:00
 Author: sdontireddy
 Slug: aboutme
 Status: published
+Save_as: aboutme.html
 
 # Hi, I'm Sarath Dontireddy
 

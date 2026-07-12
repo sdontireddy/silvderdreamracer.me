@@ -1,14 +1,132 @@
-/* Sidebar featured links heading + title case cleanup (config-only customization). */
+/* ============== Sidebar ============== */
+
+/* Sidebar featured-links heading */
 aside nav .list::before {
-  content: "Featured Articles";
-  display: block;
-  margin: 0.2rem 0 0.55rem;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: none;
+    content: "Featured";
+    display: block;
+    margin: 0.2rem 0 0.55rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: none;
 }
 
 aside nav .list li a {
-  text-transform: none !important;
+    text-transform: none !important;
+    font-size: 0.92rem;
+    display: block;
+    padding: 0.3rem 0;
+}
+
+/* Author name — bolder & slightly larger */
+aside h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.3rem;
+}
+
+/* Subtitle — refined, muted */
+aside p {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    opacity: 0.85;
+}
+
+/* Location/bio line */
+aside .location {
+    font-size: 0.82rem;
+    opacity: 0.7;
+}
+
+/* ============== Main nav (top bar) ============== */
+main > nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+main > nav a {
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 0.35rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+main > nav a:hover {
+    border-bottom-color: currentColor;
+}
+
+/* ============== Article cards ============== */
+main article {
+    padding: 1.4rem 0 1.4rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+main article:last-of-type {
+    border-bottom: none;
+}
+
+main article header h2 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+}
+
+main article header h2 a {
+    text-decoration: none;
+}
+
+main article header p {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 0.6rem;
+}
+
+main article > div {
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+/* ============== Hide footer tag cloud (noisy on a portfolio) ============== */
+.tag-cloud,
+.tags,
+.taglist,
+aside .tags,
+main .tag-cloud {
+    display: none !important;
+}
+
+/* Hide Flex theme's bottom tag list on index/article pages if rendered inside <footer> */
+main footer .tag-cloud,
+main footer .tags {
+    display: none !important;
+}
+
+/* ============== Buttons ============== */
+.btn {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* ============== Dark-theme overrides ============== */
+@media (prefers-color-scheme: dark) {
+    main > nav {
+        border-bottom-color: rgba(255,255,255,0.08);
+    }
+    main article {
+        border-bottom-color: rgba(255,255,255,0.06);
+    }
 }
