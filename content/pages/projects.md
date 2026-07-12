@@ -4,8 +4,6 @@ Slug: projects
 Status: published
 Save_as: projects.html
 
-# Projects
-
 Open source work and reference implementations I've built. Each project tackles a specific problem I've run into in production or research contexts.
 
 ---

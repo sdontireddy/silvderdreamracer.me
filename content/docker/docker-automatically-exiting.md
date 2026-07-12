@@ -6,8 +6,6 @@ Tags: GIT, Pipeline , CI/CD , Docker , Docker Compose
 Slug: docker-automatic-stops-exits
 Status: published
 
-# Curious why Docker container automatically exits
-
 Are you curious why docker container exits automatically?
 
 Docker Container needs some process running in the foreground (Please note , Not as a background process) to keep the container running.

@@ -6,8 +6,6 @@ Tags: Postman , CORS , Javascript
 Slug: CORS-postman-No-Access-Control-Allow-Origin-From-Browser
 Status: published
 
-# CORS with POSTMAN compared to Browser - "No 'Access-Control-Allow-Origin' from a browser
-
 One of the common questions is Why browser throwing 'Access-Control-Allow-Origin' header , however no issues with Postman Desktop tool
 
 ```

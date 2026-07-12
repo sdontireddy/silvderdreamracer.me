@@ -1,7 +1,7 @@
 Title: My Take on the McKinsey Report: Automation Is Coming for Tasks, Not Entire Professions
 Date: 2026-03-25 10:00
 Author: sdontireddy
-Category: WebSite
+Category: AI
 Tags: AI, Automation, Careers, Software Engineering, McKinsey
 Slug: my-take-on-the-mckinsey-report-automation-is-coming-for-tasks-not-entire-professions
 Status: published

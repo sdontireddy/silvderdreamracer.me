@@ -6,8 +6,6 @@ Tags: GIT, Pipeline  , Docker , Docker Compose
 Slug: docker-mount-volume-in-windows
 Status: published
 
-# Docker Windows Tips-Trics
-
 
 ### Struggling to mount a host directory on windows machine?
 

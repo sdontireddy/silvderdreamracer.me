@@ -6,8 +6,6 @@ Tags: AWS, Worksapce ,Install , NodeJS
 Slug: how-to-install-nodejs-on-amazon-Linux2-worksapce
 Status: published
 
-# How to install NodeJS on Amazon Linux Workspace
-
 ### Configure Yum repo
 
 ```

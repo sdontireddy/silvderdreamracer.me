@@ -6,8 +6,6 @@ Tags: AI, OpenClaw , Optimize
 Slug: openclaw-reduce-token-usage
 Status: published
 
-# How I Reduced OpenClaw Token Usage by Tightening Instructions
-
 While running OpenClaw on a VPS, I started noticing high token usage, slower responses, and occasional token-per-minute pressure from the model provider. At first, I assumed the issue was mainly caused by my workspace instruction files like `AGENTS.md`, `SOUL.md`, `TOOLS.md`, `USER.md`, and `IDENTITY.md`.
 
 But after using OpenClaw’s context treemap, I realized the biggest token consumers were not just my own instructions. A large part of the context was coming from **tool schemas**, enabled **skills**, and OpenClaw’s built-in runtime/system prompt.

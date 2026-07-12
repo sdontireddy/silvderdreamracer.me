@@ -6,8 +6,6 @@ Tags: infrastructure, docker, aws, observability, splunk, ci-cd
 Status: published
 Slug: infra
 
-# Infrastructure
-
 Notes on running systems in production — containerization, deployment pipelines, monitoring, and the operational patterns that keep things stable.
 
 ---

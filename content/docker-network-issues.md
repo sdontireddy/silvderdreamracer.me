@@ -6,8 +6,6 @@ Tags: GIT, Pipeline , CI/CD , Docker , Docker network
 Slug: docker-compse-network-connection-issues
 Status: published
 
-# How i traiged issues with docker/docker compose while setting up CI/CD 
-
 Usecase : Setup a Docker compose file to bringup entire infrastructure required to to test a microservice(infact combination of couple of microservices as we wanted to run domain based integration tests)
 as part of the CICD pipelines
 

@@ -6,8 +6,6 @@ Tags: GIT, Pipeline , CI/CD , Release Notes , Changelog.md
 Slug: gitlab-generate-release-notes-automatically-on-the-tag-creation-CICD
 Status: published
 
-# Gitlab Sample Script to generate Release Notes(CHANGELOG.md) autotmatically as part of the CI/CD pipeline
-
 Very Common Usecase is genrate Release Notes(CHANGELOG.md) automatically.
 Below use case here has two jobs underr release-creation stage. One to generate CHANGELOG.md and other to generate release automatically.
  i.e Whenever a tag is created on any project a release with corresponding release notes , artifacts are generated automatically.

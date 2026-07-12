@@ -6,8 +6,6 @@ Tags: Jmeter, Performance , Loadtesting
 Slug: jmeter-generate-bulk-xml-files-load-testing
 Status: published
 
-# Generate Bulk XML files for Load testing
-
 UseCase : One of the very common use cases while performing loading testing an backend applications /services that rely on XML's as input is to generate 1000's of XMLs  with minor differences and feed in to the application in order to gather the metrics for the services under stress. 
 
 Example applications  : A sample Mule application that reads a Distribution Order XML file and transforms in to a simple financial system asynchronous message.
