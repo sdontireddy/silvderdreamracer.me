@@ -16,38 +16,34 @@ I'm a Solution Architect with deep experience in building enterprise systems tha
 ### Enterprise Integration & API Architecture
 Integration is where most enterprise systems fail — not because the core logic is wrong, but because boundaries are unclear and failure modes aren't handled.
 
-**Approach:**
-I treat integration as a product capability, not just a connection problem. I focus on:
-- **Contract clarity**: stateless APIs, solid contracts, explicit versioning
-- **Failure handling**: retries, circuit breakers, dead-letter queues, compensation flows
-- **Middleware discipline**: use ESB for mediation, transformation, and governance — not as the business logic layer
-- **Observability**: interface health, latency, queue depth, exception trends
+#### Approach
 
-**Patterns I work with:**
-- Strangler Fig for incremental migration
-- Saga pattern for distributed transactions
-- Event-driven architecture (Kafka, SQS, SNS, pub/sub)
-- Template Method + Strategy for extension models
-- Chain of Responsibility for multi-step workflows
+I treat integration as a product capability, not just a connection problem. I focus on:
+
+- **Contract clarity** : stateless APIs, solid contracts, explicit versioning
+- **Failure handling** : retries, circuit breakers, dead-letter queues, compensation flows
+- **Middleware discipline** : use ESB for mediation, transformation, and governance — not as the business logic layer
+- **Observability** : interface health, latency, queue depth, exception trends
+
 
 ### Warehouse Automation & AS/RS Systems
 I've spent significant time working with automated storage and retrieval systems (AS/RS), integrating warehouse management systems with material handling equipment (MHE), and designing systems that run 24/7 in high-throughput environments.
 
-**Technical focus:**
-- Integrate WMS with AS/RS platforms: AutoStore, sortation, conveyance systems, robotic picking
-- Design slotting strategies, layout optimization, capacity models, and labor standards
-- Build observability into automated operations: stuck orders, station congestion, robot availability, exception trends
-- Handle high-volume message flows between control systems and warehouse execution layers
+#### Technical focus:
+
+- Integrate WMS with AS/RS / MHE platforms: AutoStore, sortation, conveyance systems, robotic picking
+- Build observability into automated operations
+- Handle high-volume message flows between control systems and warehouse execution layers with focus on infrastructure stability ,relability and security 
 
 **Recent work:**
 - AutoStore integration: designed message flows for putaway, picking, cycle counts, and inventory reconciliation between warehouse control and automated storage systems
 - Built automated test environments where QE teams can validate system behavior within automated facilities
-- Extended warehouse mobile UIs for pallet management and real-time inventory queries
+- Extended Manhattan Active WMS systems with 25+ custom extensions across UI, Entity and Business extensions 
 
 ### Cloud Architecture & DevOps
 I've led cloud migrations for enterprise systems, moving from on-prem monoliths to service-oriented architectures on AWS.
 
-**Practices:**
+#### Practices:
 - Phased migration using domain-based service extraction
 - Pre-warming infrastructure for peak traffic (flash sales, holiday spikes, event-driven loads)
 - RDS Proxy for connection pooling during traffic spikes
@@ -58,7 +54,7 @@ I've led cloud migrations for enterprise systems, moving from on-prem monoliths 
 ### AI & RAG Systems
 Recently, I've been building local AI tools and exploring how AI agents can improve enterprise workflows, operational support, and decision-making.
 
-**What I'm building:**
+#### What I'm building:
 - Local RAG (Retrieval-Augmented Generation) systems for private knowledge bases
 - AI agents that triage support tickets, summarize meeting notes, and search project documentation
 - Automated newsletter pipelines that curate technology signals from RSS feeds and podcasts
@@ -66,7 +62,7 @@ Recently, I've been building local AI tools and exploring how AI agents can impr
 
 The goal is not to replace human judgment but to reduce time spent on repetitive context retrieval and decision-support work.
 
-**Live projects:**
+#### Live projects:
 - [Supply Chain Tech Signals](https://supplychaintechsignals.com/) — automated daily newsletter curating warehouse, automation, fulfillment, visibility, transportation, and AI insights from RSS feeds, podcasts, and vendor content. Built with automated ingestion pipelines, editorial scoring, and static site deployment to Cloudflare Pages.
 
 ---
@@ -100,6 +96,7 @@ At Fanatics, I worked on modernizing a legacy global order management platform f
 ## How I Think About Delivery
 
 ### Operational Excellence
+
 A solution is only as good as its production behavior. I measure operational health across multiple dimensions:
 - **Functional readiness**: core flows work as expected
 - **Technical readiness**: integrations are stable, scalable, and secure
@@ -144,22 +141,14 @@ This applies to:
 A small set of focused projects — full details on the [Projects page](/projects.html), but highlights:
 
 - **[MAWM Environment Automation](https://github.com/sdontireddy/mawm-automate-environment-management)** — orchestrator for provisioning Manhattan Active WMS environments via sequential API execution with rollback on failure
-- **[Raven](https://github.com/sdontireddy/raven)** — JMeter + Java loader for generating 100K+ middleware payloads from YAML-driven templates
 - **[Supply Chain Tech Signals](https://supplychaintechsignals.com/)** — automated daily newsletter curating high-signal content from the supply chain / warehouse automation space
 - **[Local RAG Knowledge Base](https://github.com/sdontireddy/rag-knowledge-base)** — Docker + Ollama + ChromaDB stack for private semantic search over markdown notes
 - **[silverdreamracer.me](https://github.com/sdontireddy/silverdreamracer.me)** — this site; Pelican + GitHub Actions + S3, content-as-code publishing
+- **[Raven](https://github.com/sdontireddy/raven)** — JMeter + Java loader for generating 100K+ middleware payloads from YAML-driven templates
 
 ---
 
 ## What I'm Working On Now
-
-I'm exploring how AI agents can improve enterprise workflows — not just chatbots, but agents that can:
-
-- Triage support tickets and route them to the right team
-- Summarize meeting notes and extract action items
-- Search project documentation and surface relevant context
-- Run diagnostic checks on system integrations
-- Curate daily technology signals from multiple feeds
 
 The pattern I'm experimenting with: **Hermes (AI orchestrator) + specialized agents for narrow, routable jobs**. One agent handles orchestration and deep tool workflows; others handle focused tasks like daily news reading, infrastructure operations, or local knowledge retrieval.
 
@@ -169,4 +158,4 @@ The pattern I'm experimenting with: **Hermes (AI orchestrator) + specialized age
 
 I write about enterprise architecture, AI agents, and integration patterns at [silverdreamracer.me](https://www.silverdreamracer.me).
 
-If you're working on integration architecture, AS/RS systems, cloud migrations, or AI-powered enterprise tools, I'd like to hear from you.
+If you're working on integration architecture, AS/RS systems, cloud migrations, or AI-powered enterprise tools, I'd like to hear from you. Pls feel to drop a note at sarath.dontireddy@outlook.com
