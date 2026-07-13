@@ -3,7 +3,7 @@ Date: 2026-07-13
 Modified: 2026-07-13
 Category: 
 Tags: infrastructure, docker, aws, observability, splunk, ci-cd
-Status: published
+Status: hidden
 Slug: infra
 
 Notes on running systems in production — containerization, deployment pipelines, monitoring, and the operational patterns that keep things stable.
