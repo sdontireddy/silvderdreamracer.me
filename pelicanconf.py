@@ -13,8 +13,10 @@ SITEDESCRIPTION = 'Practical notes on integration architecture, AS/RS automation
 SITESUBTITLE = 'Solution Architect — Integration, AS/RS, Cloud, AI'
 PYGMENTS_STYLE = "monokai"
 THEME = 'Flex'
+# Allow local template overrides placed in the project's ./templates/ folder
+THEME_TEMPLATES_OVERRIDES = ['templates']
 
-STATIC_PATHS = ["images", "extra/ads.txt", "extra/custom.css"]
+STATIC_PATHS = ["images", "extra/ads.txt", "extra/custom.css", "extra/custom-banner.css"]
 CUSTOM_CSS = "custom.css"
 
 DATE_FORMATS = {
@@ -176,6 +178,7 @@ ADD_THIS_ID = 'ra-63dbd4845c561c7d'
 EXTRA_PATH_METADATA = {
     "extra/ads.txt": {"path": "ads.txt"},
     "extra/custom.css": {"path": "custom.css"},
+    "extra/custom-banner.css": {"path": "custom-banner.css"},
 }
 
 SITEMAP = {
