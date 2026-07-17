@@ -13,6 +13,8 @@ SITEDESCRIPTION = 'Practical notes on integration architecture, AS/RS automation
 SITESUBTITLE = 'Solution Architect — Integration, AS/RS, Cloud, AI'
 PYGMENTS_STYLE = "monokai"
 THEME = 'Flex'
+# Allow local template overrides placed in the project's ./templates/ folder
+THEME_TEMPLATES_OVERRIDES = ['templates']
 
 STATIC_PATHS = ["images", "extra/ads.txt", "extra/custom.css"]
 CUSTOM_CSS = "custom.css"
