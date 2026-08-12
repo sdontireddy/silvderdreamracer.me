@@ -1,5 +1,5 @@
-Title: Building a Daily Newsletter with AI Engineering: What Actually Worked
-Date: 2026-08-12 08:00
+Title: AI Engineering: What I Learned Turning a Personal AI Project Into a Live System
+Date: 2026-08-11 23:00
 Author: sdontireddy
 Category: AI
 Tags: AI, Supply Chain, Automation, System Design
@@ -7,8 +7,6 @@ Slug: building-daily-newsletter-ai-engineering
 Status: published
 
 ---
-
-# AI Engineering: What I Learned Turning a Personal AI Project Into a Live System
 
 Keeping up with technological change in the supply chain world had become increasingly difficult.
 
